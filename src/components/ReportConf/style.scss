@@ -1,0 +1,75 @@
+.report-config-container{
+    padding-top: 20px;
+
+    .report-create{
+        .label{
+            font-size: 18px;
+            color: #6A6A6A;
+        }
+
+        .date-range{
+            margin-bottom: 40px;
+
+            .row{
+                padding-left: 15px;
+                margin-top: 15px;
+            }
+        }
+
+        .report-options{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .column{
+                width: 50%;
+                padding: 0 20px;
+
+                .type-select{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 20px;
+
+                    span{
+                        width: 100%;
+                        text-align: center;
+                    }
+
+                    .teaxtfield{
+                        width: 225px;
+                    }
+                }
+            }
+
+            .row{
+                width: 100%;
+                padding: 20px 0 0 20px;
+
+                span{
+                    width: 135px;
+                    text-align: center;
+                }
+
+                .type-select{
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                textarea{
+                    width: 100%;
+                    height: 100px;
+                }
+            }
+        }
+    }
+
+    .buttons{
+        padding-top: 20px;
+        text-align: center;
+
+        button{
+            margin: 0 7.5px;
+        }
+    }
+}

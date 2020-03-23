@@ -1,0 +1,21 @@
+.accounts-list-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(100vh - 142px);
+    margin-top: 20px;
+
+    .account-table-container{
+        margin-bottom: 40px;
+        padding: 15px;
+        background-color: #F2F2F2;
+    }
+
+    .buttons{
+        text-align: center;
+
+        button{
+            margin: 20px 7.5px 0;
+        }
+    }
+}

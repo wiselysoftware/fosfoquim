@@ -1,0 +1,46 @@
+.devices-section{
+    .section-header .title h3{
+        margin-left: 0;
+    }
+
+    .last-seen{
+        position: relative;
+        input{
+            width: 250px;
+            padding-left: 30px;
+            font-size: inherit;
+            color: inherit;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid #6A6A6A;
+        }
+
+        img{
+            width: 15px;
+            height: auto;
+            position: absolute;
+            top: 2px;
+            left: 7.5px;
+        }
+    }
+    
+    .list-filters{
+        max-width: 900px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0 15px;
+    }
+
+    .device-list-container{
+        min-height: calc(100vh - 210px);
+        padding: 20px;
+        background-color: #F2F2F2;
+    }
+
+    .devices-list{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+}

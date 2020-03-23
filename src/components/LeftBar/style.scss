@@ -1,0 +1,45 @@
+.main-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    max-width: 250px;
+    height: calc(100vh - 60px);;
+    background-color: #F2F2F2;
+    z-index: 100;
+
+    .guest-link{
+        margin-bottom: 20px;
+        text-align: center;
+        text-decoration: underline;
+        color: #F24130;
+    }
+
+    ul{
+        li{
+            padding: 20px;
+            color: #6A6A6A;
+            cursor: pointer;
+
+            &.active{
+                color: #F24130;
+            }
+
+            img{
+                width: 25px;
+                height: auto;
+                vertical-align: middle;
+            }
+
+            span{
+                padding-left: 20px;
+                vertical-align: middle;
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+    }
+}

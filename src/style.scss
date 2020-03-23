@@ -1,0 +1,250 @@
+// Reset
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+// Font
+
+*{
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+// Vars
+$mainBlue: #3E73A8;
+$mainRed: #F24130;
+
+.view-wrapp{
+	height: calc(100vh - 60px);
+	display: flex;
+	justify-content: space-between;
+}
+
+.view{
+	width: 100%;
+	padding: 80px 20px 20px 270px;
+}
+
+.section-header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.title{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.back{
+			padding-top: 4px;
+			cursor: pointer;
+
+			img{
+				width: 20px;
+				height: auto;	
+				transform: rotate(90deg);
+			}
+		}
+
+		h3{
+			margin-left: 10px;
+			font-weight: 400;
+			font-size: 21px;
+			color: #000333;
+		}
+	}
+
+	.last-seen{
+		font-size: 16px;
+		font-weight: 400;
+		color: #6A6A6A;
+	}
+}
+
+.main-btn{
+	min-width: 150px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 16px;
+	color: #fff;
+	background-color: #3E73A8;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+.type-select{
+	position: relative;
+
+	.MuiInput-root{
+		width: 200px;
+		padding: 0 15px;
+		box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, .3);
+		background-color: #fff;
+		color: #F24130;
+
+		&:before, &:after{
+			display: none;
+		}
+	}
+
+	.MuiSelect-select:focus{
+		background-color: #fff;
+	}
+
+	.MuiInputBase-input{
+		padding: 5px 0 5px;
+	}
+
+	.MuiSelect-icon{
+		display: none;
+	}
+
+	img{
+		width: 20px;
+		height: auto;
+		position: absolute;
+		right: 15px;
+		top: 5px;
+	}
+
+	.textfield{
+		height: 30px;
+		color: #F24130;
+		font-size: 16px;
+		line-height: 30px;
+		padding: 0 10px;
+		box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, .3);
+		outline: none;
+		border: none;
+	}
+}
+
+.picker-wrapp{
+	display: inline-block;
+	position: relative;
+
+	&:last-child{
+		margin-left: 35px;
+	}
+
+	.date-picker{
+		padding: 7px 15px;
+		background-color: #fff;
+		color: #F24130;
+		border: none;
+	}
+
+	img{
+		width: 18px;
+		height: auto;
+		position: absolute;
+		right: 15px;
+		top: 5px;
+	}
+
+	.react-datepicker-wrapper{
+		width: 250px;
+		background-color: #fff;
+		box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, .3);
+	}
+}
+
+.date-header-label{
+	margin-right: 10px;
+	font-size: 16px;
+	color: #6A6A6A;
+}
+
+thead{
+	tr{
+		background-color: #E4E9F0;
+	}
+}
+
+tbody{
+	tr{
+		&:nth-child(odd){
+			background-color: #fff;
+		}
+
+		&:nth-child(even){
+			background-color: #E4E9F0;
+		}
+
+		&.active{
+			background-color: #B4D1FA;
+		}
+	}
+}
+
+tr{
+	cursor: pointer;
+}
+
+.dialog-wrapp{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(106, 106, 106, .6);
+    z-index: 1000;
+}
+
+.dialog-container{
+	min-width: 750px;
+	position: absolute;
+	padding: 20px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%);
+	background-color: #fff;
+	transform: translate(-50%, -50%);
+}
