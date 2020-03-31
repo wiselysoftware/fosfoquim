@@ -1,15 +1,38 @@
 .main-menu{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: fixed;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    max-width: 250px;
-    height: calc(100vh - 60px);;
-    background-color: #F2F2F2;
-    z-index: 100;
+    
+
+    .MuiDrawer-paper{
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #F2F2F2;
+    }
+
+    .header-line{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        background-color: #3E73A8;
+
+        .logo{
+            width: 130px;
+        }
+
+        .close{
+            width: 25px;
+            position: relative;
+            left: 25px;
+            cursor: pointer;
+
+            img{
+                width: 100%;
+                height: auto;
+                transform: rotate(90deg);
+            }
+        }
+    }
 
     .guest-link{
         margin-bottom: 20px;

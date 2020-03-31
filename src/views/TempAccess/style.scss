@@ -2,10 +2,35 @@
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
-    padding-top: 80px;
+    padding: 80px 10px 0;
 
-    .section-header .title h3{
-        margin-left: 0;
+    .section-header{
+        @media(max-width: 950px){
+            flex-wrap: wrap;
+
+            .date-range{
+                width: 100%;
+                margin-top: 15px;
+
+                @media(max-width: 680px){
+                    padding: 0;
+
+                    .picker-wrapp{
+                        width: 100%;
+                        margin: 10px 0 10px;
+
+                        .date-header-label{
+                            display: inline-block;
+                            min-width: 42px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .title h3{
+            margin-left: 0;
+        }
     }
     
     .temp-access-content{
@@ -24,5 +49,24 @@
                 color: #000333;
             }
         }
+    }
+
+    .date-range{
+        @media(max-width: 768px){
+            padding: 0 10px;
+        }
+    }
+}
+
+.date-range{
+    @media(max-width: 768px){
+        flex-wrap: wrap;
+        padding-left: 0;
+    }
+}
+
+.picker-wrapp .react-datepicker-wrapper{
+    @media(max-width: 450px){
+        width: 200px;
     }
 }

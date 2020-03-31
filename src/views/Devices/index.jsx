@@ -1,6 +1,8 @@
 import React, { Component }  from 'react';
 import "./style.scss"
 
+import Grid from '@material-ui/core/Grid';
+
 import DeviceCard from "../../components/DeviceCard/index.jsx";
 
 import MenuItem from '@material-ui/core/MenuItem';
@@ -58,48 +60,58 @@ class Devices extends Component {
 				</div>
 
 				<div className="list-filters">
-					<div className="type-select">
-						<span className="date-header-label">Client:</span>
-						<Select labelId="demo-simple-select-label" id="demo-simple-select"
-							value={selectedClient} onChange={(e) => {this.selectClient(e)}}>
-							<MenuItem value={'all'}>All</MenuItem>
-							<MenuItem value={'client1'}>Client 1</MenuItem>
-							<MenuItem value={'client2'}>Client 2</MenuItem>
-							<MenuItem value={'client3'}>Client 3</MenuItem>
-						</Select>
-						<img src={moreIcon} alt=""/>
-					</div>
+					<Grid container spacing={3}>
+						<Grid item xs={12} md={6} lg={4} xl={3}>
+							<div className="type-select">
+								<span className="date-header-label">Client:</span>
+								<Select labelId="demo-simple-select-label" id="demo-simple-select"
+									value={selectedClient} onChange={(e) => {this.selectClient(e)}}>
+									<MenuItem value={'all'}>All</MenuItem>
+									<MenuItem value={'client1'}>Client 1</MenuItem>
+									<MenuItem value={'client2'}>Client 2</MenuItem>
+									<MenuItem value={'client3'}>Client 3</MenuItem>
+								</Select>
+								<img src={moreIcon} alt=""/>
+							</div>
+						</Grid>
 
-					<div className="type-select">
-						<span className="date-header-label">Country:</span>
-						<Select labelId="demo-simple-select-label" id="demo-simple-select"
-							value={selectedCountry} onChange={(e) => {this.selectCountry(e)}}>
-							<MenuItem value={'all'}>All</MenuItem>
-							<MenuItem value={'country1'}>Country 1</MenuItem>
-							<MenuItem value={'country2'}>Country 2</MenuItem>
-							<MenuItem value={'country3'}>Country 3</MenuItem>
-						</Select>
-						<img src={moreIcon} alt=""/>
-					</div>
+						<Grid item xs={12} md={6} lg={4} xl={3}>
+							<div className="type-select">
+								<span className="date-header-label">Country:</span>
+								<Select labelId="demo-simple-select-label" id="demo-simple-select"
+									value={selectedCountry} onChange={(e) => {this.selectCountry(e)}}>
+									<MenuItem value={'all'}>All</MenuItem>
+									<MenuItem value={'country1'}>Country 1</MenuItem>
+									<MenuItem value={'country2'}>Country 2</MenuItem>
+									<MenuItem value={'country3'}>Country 3</MenuItem>
+								</Select>
+								<img src={moreIcon} alt=""/>
+							</div>
+						</Grid>
 
-					<div className="type-select">
-						<span className="date-header-label">Type:</span>
-						<Select labelId="demo-simple-select-label" id="demo-simple-select"
-							value={selectedType} onChange={(e) => {this.selectType(e)}}>
-							<MenuItem value={'all'}>All</MenuItem>
-							<MenuItem value={'co2'}>CO2</MenuItem>
-							<MenuItem value={'temperature'}>Temperature</MenuItem>
-							<MenuItem value={'humidity'}>Humidity</MenuItem>
-						</Select>
-						<img src={moreIcon} alt=""/>
-					</div>
+						<Grid item xs={12} md={6} lg={4} xl={3}>
+							<div className="type-select">
+								<span className="date-header-label">Type:</span>
+								<Select labelId="demo-simple-select-label" id="demo-simple-select"
+									value={selectedType} onChange={(e) => {this.selectType(e)}}>
+									<MenuItem value={'all'}>All</MenuItem>
+									<MenuItem value={'co2'}>CO2</MenuItem>
+									<MenuItem value={'temperature'}>Temperature</MenuItem>
+									<MenuItem value={'humidity'}>Humidity</MenuItem>
+								</Select>
+								<img src={moreIcon} alt=""/>
+							</div>
+						</Grid>
+					</Grid>
 				</div>
 
 				<div className="device-list-container">
 					<div className="devices-list">
-						{items.map((item) => {
-							return(<DeviceCard key={item.id}/>)
-						})}
+						<Grid container spacing={3}>	
+							{items.map((item) => {
+								return(<DeviceCard key={item.id}/>)
+							})}
+						</Grid>
 					</div>
 				</div>
             </main>

@@ -3,12 +3,31 @@ import "./style.scss"
 
 import { Link } from "react-router-dom";
 
+import Drawer from '@material-ui/core/Drawer';
+
+import { connect } from "react-redux";
+
+import { toggleNav } from '../../actions';
+
 import DeviceIcon from "../../assets/images/chip.svg";
 import SettingIcon from "../../assets/images/gear.svg";
 import ClientsIcon from "../../assets/images/team.svg";
 import DeviceActiveIcon from "../../assets/images/device-active.svg";
 import ClientsActiveIcon from "../../assets/images/clients-active.svg";
 import SettingActiveIcon from "../../assets/images/accounts-active.svg";
+
+import back from "../../assets/images/down-arrow.svg";
+import logo from "../../assets/images/logo.svg";
+
+const mapStateToProps = state => {
+    return { navOpened: state.navOpened };
+};
+
+function mapDispatchToProps(dispatch) {
+    return {
+        toggleNav: () => dispatch(toggleNav())
+    };
+}
 
 class LeftBar extends Component {
 	constructor(){
@@ -51,8 +70,16 @@ class LeftBar extends Component {
 		let { active } = this.state;
 
 		return(
-            <menu className="main-menu">
+            <Drawer className="main-menu" open={this.props.navOpened} onClose={() => {this.props.toggleNav()}}>
 				<ul>
+					<div className="header-line">
+						<div className="logo">
+							<img src={logo} alt=""/>
+						</div>
+						<div className="close" onClick={() => {this.props.toggleNav()}}>
+							<img src={back} alt=""/>
+						</div>
+					</div>
 					<li className={active === 0 ? "active" : ""}>
 						<Link to="/devices" onClick={()=>{this.setActive(0)}}>
 							{active === 0 ? <img src={DeviceActiveIcon} alt=""/> : <img src={DeviceIcon} alt=""/>}
@@ -74,9 +101,9 @@ class LeftBar extends Component {
 				</ul>
 
 				<Link className="guest-link" to="/temporary-access">Guest Access</Link>
-			</menu>
+			</Drawer>
 		)
 	}
 }
 
-export default LeftBar;
+export default connect(mapStateToProps, mapDispatchToProps)(LeftBar);

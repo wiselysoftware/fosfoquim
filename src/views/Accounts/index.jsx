@@ -56,7 +56,7 @@ class Accounts extends Component {
 
 				<div className="accounts-list-container">
 					<div className="account-table-container">
-						<TableContainer component={Paper}>
+						<TableContainer component={Paper} className="table-container">
 							<Table stickyHeader aria-label="simple table">
 								<TableHead>
 									<TableRow>
@@ -86,7 +86,7 @@ class Accounts extends Component {
 					</div>
 
 					<div className="account-table-container">
-						<TableContainer component={Paper}>
+						<TableContainer component={Paper} className="table-container">
 							<Table stickyHeader aria-label="simple table">
 								<TableHead>
 									<TableRow>

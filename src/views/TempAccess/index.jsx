@@ -1,4 +1,5 @@
 import React, { Component }  from 'react';
+
 import "./style.scss"
 
 import Table from '@material-ui/core/Table';
@@ -71,27 +72,31 @@ class TempAccess extends Component {
 
 					<div className="date-range">
 						<div className="picker-wrapp">
-							<span className="date-header-label">From:</span>
-							<DatePicker
-								className="date-picker"
-								selected={startDate}
-								onChange={ (date) => {this.changeStartDate(date)} }
-								dateFormat="MMMM d, yyyy h:mm aa"
-							/>
+							<div className="pickers">
+								<span className="date-header-label">From:</span>
+								<DatePicker
+									className="date-picker"
+									selected={startDate}
+									onChange={ (date) => {this.changeStartDate(date)} }
+									dateFormat="MMMM d, yyyy h:mm aa"
+								/>
 
-							<img src={dateIcon} alt=""/>
+								<img src={dateIcon} alt=""/>
+							</div>
 						</div>
 
 						<div className="picker-wrapp">
-							<span className="date-header-label">To:</span>
-							<DatePicker
-								className="date-picker"
-								selected={endDate}
-								onChange={ (date) => {this.changeEndDate(date)} }
-								dateFormat="MMMM d, yyyy h:mm aa"
-							/>
+							<div className="pickers">
+								<span className="date-header-label">To:</span>
+								<DatePicker
+									className="date-picker"
+									selected={endDate}
+									onChange={ (date) => {this.changeEndDate(date)} }
+									dateFormat="MMMM d, yyyy h:mm aa"
+								/>
 
-							<img src={dateIcon} alt=""/>
+								<img src={dateIcon} alt=""/>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -110,7 +115,7 @@ class TempAccess extends Component {
 					<div className="table">
 						<div className="label">Data by timestamps</div>
 
-						<TableContainer component={Paper} className="clients-list">
+						<TableContainer component={Paper} className="clients-list table-container">
 							<Table stickyHeader aria-label="simple table">
 								<TableHead>
 									<TableRow>

@@ -10,9 +10,28 @@
         .date-range{
             margin-bottom: 40px;
 
+            @media(max-width: 768px){
+                margin-bottom: 25px;
+            }
+
             .row{
                 padding-left: 15px;
                 margin-top: 15px;
+
+                @media(max-width: 768px){
+                    flex-wrap: wrap;
+                    padding-left: 0;
+
+                    .picker-wrapp{
+                        width: 100%;
+                        margin: 10px 0 10px;
+
+                        .date-header-label{
+                            min-width: 42px;
+                            display: inline-block;
+                        }
+                    }
+                }
             }
         }
 
@@ -23,7 +42,21 @@
 
             .column{
                 width: 50%;
-                padding: 0 20px;
+                padding: 0 10px;
+                
+                @media(max-width: 768px){
+                    width: 100%;
+                    padding-left: 0;
+
+                    .date-header-label{
+                        max-width: 100px;
+                        text-align: left!important;
+                    }
+
+                    .textfield{
+                        width: 100%;
+                    }
+                }
 
                 .type-select{
                     display: flex;
@@ -46,9 +79,18 @@
                 width: 100%;
                 padding: 20px 0 0 20px;
 
+                @media(max-width: 768px){
+                    padding-left: 0;
+                }
+
                 span{
                     width: 135px;
                     text-align: center;
+
+                    @media(max-width: 768px){
+                        max-width: 100px;
+                        text-align: left!important;
+                    }
                 }
 
                 .type-select{

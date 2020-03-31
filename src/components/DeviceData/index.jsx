@@ -58,27 +58,31 @@ class DeviceData extends Component {
 				<div className="data-header">
 					<div className="date-pickers">
 						<div className="picker-wrapp">
-							<span className="date-header-label">From:</span>
-							<DatePicker
-								className="date-picker"
-								selected={startDate}
-								onChange={ (date) => {this.changeStartDate(date)} }
-								dateFormat="MMMM d, yyyy h:mm aa"
-							/>
+							<div className="pickers">
+								<span className="date-header-label">From:</span>
+								<DatePicker
+									className="date-picker"
+									selected={startDate}
+									onChange={ (date) => {this.changeStartDate(date)} }
+									dateFormat="MMMM d, yyyy h:mm aa"
+								/>
 
-							<img src={dateIcon} alt=""/>
+								<img src={dateIcon} alt=""/>
+							</div>
 						</div>
 
 						<div className="picker-wrapp">
-							<span className="date-header-label">To:</span>
-							<DatePicker
-								className="date-picker"
-								selected={endDate}
-								onChange={ (date) => {this.changeEndDate(date)} }
-								dateFormat="MMMM d, yyyy h:mm aa"
-							/>
+							<div className="pickers">
+								<span className="date-header-label">To:</span>
+								<DatePicker
+									className="date-picker"
+									selected={endDate}
+									onChange={ (date) => {this.changeEndDate(date)} }
+									dateFormat="MMMM d, yyyy h:mm aa"
+								/>
 
-							<img src={dateIcon} alt=""/>
+								<img src={dateIcon} alt=""/>
+							</div>
 						</div>
 					</div>
 

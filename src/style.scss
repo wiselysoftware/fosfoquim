@@ -66,13 +66,21 @@ $mainRed: #F24130;
 
 .view{
 	width: 100%;
-	padding: 80px 20px 20px 270px;
+	padding: 80px 20px 20px 20px;
+
+	@media(max-width: 600px){
+		padding: 80px 15px 15px 15px;
+	}
 }
 
 .section-header{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	@media(max-width: 768px){
+		flex-wrap: wrap;
+	}
 
 	.title{
 		display: flex;
@@ -102,6 +110,11 @@ $mainRed: #F24130;
 		font-size: 16px;
 		font-weight: 400;
 		color: #6A6A6A;
+
+		@media(max-width: 768px){
+			width: 100%;
+			margin-top: 15px;
+		}
 	}
 }
 
@@ -117,17 +130,29 @@ $mainRed: #F24130;
 	outline: none;
 	border: none;
 	cursor: pointer;
+
+	@media(max-width: 768px){
+		min-width: 0;
+		font-size: 14px;
+	}
 }
 
 .type-select{
 	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 
 	.MuiInput-root{
-		width: 200px;
+		width: 100%;
 		padding: 0 15px;
 		box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, .3);
 		background-color: #fff;
 		color: #F24130;
+
+		@media(max-width: 1280px){
+			width: calc(100% - 70px);
+		}
 
 		&:before, &:after{
 			display: none;
@@ -235,11 +260,15 @@ tr{
     right: 0;
     bottom: 0;
     background-color: rgba(106, 106, 106, .6);
-    z-index: 1000;
+	z-index: 1000;
+	
+	@media(max-width: 1024px){
+		overflow-y: scroll;
+	}
 }
 
 .dialog-container{
-	min-width: 750px;
+	min-width: 730px;
 	position: absolute;
 	padding: 20px;
 	left: 50%;
@@ -247,4 +276,74 @@ tr{
 	transform: translate(-50%);
 	background-color: #fff;
 	transform: translate(-50%, -50%);
+
+	@media(max-width: 768px){
+		width: calc(100% - 20px);
+		top: 10px;
+		left: 10px;
+		transform: none;
+		min-width: 0;
+	}
+}
+
+.table-container {
+	overflow-x: auto;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 10px;
+}
+  
+tr {
+	height: 40px !important;
+}
+
+th {
+	max-width: 125px;
+	min-width: 125px;
+	padding: 0 !important;
+	overflow-x: auto;
+	white-space: nowrap;
+	text-align: center !important;
+}
+  
+td {
+	height: 40px !important;
+	padding: 5px !important;
+	text-align: center !important;
+}
+
+@media(max-width: 768px){
+	.dialog-container{
+		.main-btn{
+			min-width: 150px;
+			font-size: 16px;
+		}
+	}
+
+	.section-header .title h3{
+		font-size: 18px;
+	}
+}
+
+@media(max-width: 600px){
+	.dialog-container{
+		padding: 20px 10px;
+
+		.buttons{
+			text-align: center;
+		}
+
+		.main-btn{
+			display: inline-block;
+			margin-top: 15px!important;
+		}
+	}
+
+	.main-header .logo{
+		width: 120px;
+	}
+
+	.main-header .guest-label{
+		font-size: 14px;
+	}
 }

@@ -4,6 +4,21 @@
     align-items: center;
     padding-top: 30px;
 
+    @media(max-width: 975px){
+        flex-wrap: wrap;
+
+        .tabs{
+            order: 2;
+            margin-top: 15px;
+        }
+
+        .buttons{
+            width: 100%;
+            order: 1;
+            text-align: center;
+        }
+    }
+
     .tabs{
         .tab{
             min-width: 160px;
@@ -13,6 +28,10 @@
             font-size: 18px;
             color: #6A6A6A;
             cursor: pointer;
+
+            @media(max-width: 600px){
+                min-width: 110px;
+            }
 
             &.active{
                 border-bottom: 2px solid #F24130;
@@ -33,7 +52,38 @@
     padding: 20px;
     background-color: #F2F2F2;
 
+    @media(max-width: 600px){
+        padding: 10px;
+    }
+
     .tab-item{
         height: 100%;
+
+        .data-header{
+            @media(max-width: 1160px){
+                flex-wrap: wrap;
+
+                .date-pickers{
+                    width: 100%;
+                    margin-bottom: 10px;
+
+                    @media(max-width: 966px){
+                        .picker-wrapp{
+                            width: 100%;
+                            margin: 10px 0 10px;
+
+                            .date-header-label{
+                                min-width: 42px;
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .type-select .MuiInput-root{
+                min-width: 120px;
+            }
+        }
     }
 }

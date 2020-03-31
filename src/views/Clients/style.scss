@@ -29,6 +29,22 @@
         justify-content: space-between;
         align-items: center;
         margin-top: 10px;
+
+        @media(max-width: 900px){
+            flex-wrap: wrap;
+        }
+
+        .type-select{
+            margin: 10px 0;
+
+            @media(max-width: 900px){
+                width: 100%;
+
+                .textfield, .MuiInput-roo{
+                    width: calc(100% - 140px);
+                }
+            }
+        }
     }
 }
 
@@ -38,9 +54,19 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+
+        @media(max-width: 1200px){
+            flex-wrap: wrap;
+        }
     }
 
     .buttons{
+        @media(max-width: 1200px){
+            width: 100%;
+            padding-top: 25px;
+            text-align: center;
+        }
+
         button{
             margin: 0 7.5px;
         }
@@ -50,6 +76,10 @@
         width: 100%;
         max-width: 500px;
         margin-top: 50px;
+
+        @media(max-width: 900px){
+            max-width: 100%;
+        }
 
         p{
             display: flex;
@@ -83,6 +113,15 @@
                 color: #6A6A6A;
                 font-size: 16px;
                 font-family: 'PT Sans', sans-serif;
+
+                @media(max-width: 600px){
+                    flex-wrap: wrap;
+                    padding: 5px 10px;
+
+                    div{
+                        width: 100%;
+                    }
+                }
             }
 
             .mail-btn{

@@ -1,10 +1,21 @@
 import React, { Component }  from 'react';
+
+import { connect } from "react-redux";
+import { toggleNav } from '../../actions';
+
 import "./style.scss"
 
 import { Link } from "react-router-dom";
 
 import logo from "../../assets/images/logo.svg";
 import logOut from "../../assets/images/logout.svg";
+import menu from "../../assets/images/menu.svg";
+
+function mapDispatchToProps(dispatch) {
+    return {
+        toggleNav: () => dispatch(toggleNav())
+    };
+}
 
 class Header extends Component {
 	constructor(){
@@ -19,11 +30,17 @@ class Header extends Component {
 
 		return(
             <header className="main-header">
-				<Link to="/devices">
-					<div className="logo">
-						<img src={logo} alt=""/>
+				<div className="header-left">
+					<div className="menu" onClick={() => {this.props.toggleNav()}}>
+						<img src={menu} alt=""/>
 					</div>
-				</Link>
+					
+					<Link to="/devices">
+						<div className="logo">
+							<img src={logo} alt=""/>
+						</div>
+					</Link>
+				</div>
 
 				{!this.props.guest ? <div className="header-controls">
 					<div className="user">
@@ -44,4 +61,4 @@ class Header extends Component {
 	}
 }
 
-export default Header;
+export default connect(null, mapDispatchToProps)(Header);

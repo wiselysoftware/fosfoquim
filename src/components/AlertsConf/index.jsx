@@ -49,7 +49,7 @@ class AlertsConf extends Component {
 				</div>
 
 				<div className="alerts-set-table">
-					<TableContainer component={Paper} className="clients-list">
+					<TableContainer component={Paper} className="clients-list table-container">
 						<Table stickyHeader aria-label="simple table">
 							<TableHead>
 								<TableRow>

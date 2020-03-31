@@ -1,5 +1,6 @@
 import React, { Component }  from 'react';
-import "./style.scss"
+
+import "./style.scss";
 
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -64,7 +65,7 @@ class Clients extends Component {
 				</div>
 
 				<div className="clients-list-container">
-					<TableContainer component={Paper} className="clients-list">
+					<TableContainer component={Paper} className="clients-list table-container">
 						<Table stickyHeader aria-label="simple table">
 							<TableHead>
 								<TableRow>

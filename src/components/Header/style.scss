@@ -17,10 +17,35 @@
         color: #fff;
     }
 
+    .header-left{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 20px;
+
+        @media(max-width: 600px){
+            a{
+                display: none;
+            }
+        }
+    }
+
+    .menu{
+        display: inline-block;
+        width: 25px;
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+
+        cursor: pointer;
+    }
+
     .logo{
         width: 180px;
         height: 100%;
-        padding-left: 30px;
+        padding-left: 20px;
 
         img{
             width: 100%;
