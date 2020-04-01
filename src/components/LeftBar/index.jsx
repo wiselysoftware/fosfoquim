@@ -64,6 +64,7 @@ class LeftBar extends Component {
 
 	setActive(index){
 		this.setState({active: index});
+		this.props.toggleNav();
 	}
 
 	render() {
