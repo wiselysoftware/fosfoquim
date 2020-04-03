@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/fosfoquim/static/css/main.33289faa.chunk.css",
+    "main.js": "/fosfoquim/static/js/main.3869324c.chunk.js",
+    "main.js.map": "/fosfoquim/static/js/main.3869324c.chunk.js.map",
+    "runtime-main.js": "/fosfoquim/static/js/runtime-main.90b13bb5.js",
+    "runtime-main.js.map": "/fosfoquim/static/js/runtime-main.90b13bb5.js.map",
+    "static/css/2.b90ce945.chunk.css": "/fosfoquim/static/css/2.b90ce945.chunk.css",
+    "static/js/2.e37559b8.chunk.js": "/fosfoquim/static/js/2.e37559b8.chunk.js",
+    "static/js/2.e37559b8.chunk.js.map": "/fosfoquim/static/js/2.e37559b8.chunk.js.map",
+    "index.html": "/fosfoquim/index.html",
+    "precache-manifest.c208298ecbb29f3385f2a3001e1f6716.js": "/fosfoquim/precache-manifest.c208298ecbb29f3385f2a3001e1f6716.js",
+    "service-worker.js": "/fosfoquim/service-worker.js",
+    "static/css/2.b90ce945.chunk.css.map": "/fosfoquim/static/css/2.b90ce945.chunk.css.map",
+    "static/css/main.33289faa.chunk.css.map": "/fosfoquim/static/css/main.33289faa.chunk.css.map",
+    "static/js/2.e37559b8.chunk.js.LICENSE.txt": "/fosfoquim/static/js/2.e37559b8.chunk.js.LICENSE.txt",
+    "static/media/accounts-active.svg": "/fosfoquim/static/media/accounts-active.1a26c22e.svg",
+    "static/media/calendar.svg": "/fosfoquim/static/media/calendar.0b933919.svg",
+    "static/media/chip.svg": "/fosfoquim/static/media/chip.2b36db2f.svg",
+    "static/media/clients-active.svg": "/fosfoquim/static/media/clients-active.55a6fa73.svg",
+    "static/media/device-active.svg": "/fosfoquim/static/media/device-active.f045f0f6.svg",
+    "static/media/down-arrow.svg": "/fosfoquim/static/media/down-arrow.e840bd6a.svg",
+    "static/media/gear.svg": "/fosfoquim/static/media/gear.9501fe4d.svg",
+    "static/media/logo.svg": "/fosfoquim/static/media/logo.38e28fdc.svg",
+    "static/media/logout.svg": "/fosfoquim/static/media/logout.b6890bc9.svg",
+    "static/media/mail.svg": "/fosfoquim/static/media/mail.51c44790.svg",
+    "static/media/menu.svg": "/fosfoquim/static/media/menu.abec3eda.svg",
+    "static/media/search.svg": "/fosfoquim/static/media/search.c749c649.svg",
+    "static/media/team.svg": "/fosfoquim/static/media/team.f5936394.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.90b13bb5.js",
+    "static/css/2.b90ce945.chunk.css",
+    "static/js/2.e37559b8.chunk.js",
+    "static/css/main.33289faa.chunk.css",
+    "static/js/main.3869324c.chunk.js"
+  ]
+}
